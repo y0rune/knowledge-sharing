@@ -49,16 +49,26 @@ function create() {
         docker run \
             --name "$NAME" \
             -d \
+            --restart unless-stopped \
             -p "25$i":22 \
             ks-chinczyk > /dev/null 2>&1 &&
             timestamp "Container $NAME has been created."
     done
 }
 
+function start() {
+    NUMBER_OF_CONTAINER=$(docker ps --all | grep -c ks-chinczyk)
+    for i in $(seq -f "%02g" 1 "$NUMBER_OF_CONTAINER"); do
+        NAME="ks-chinczyk-$i"
+        docker start "$NAME" > /dev/null 2>&1 &&
+            timestamp "Container $NAME has been created."
+    done
+}
 function main() {
     NUMBER_OF_CONTAINER="${2:-1}"
     [ "$1" = "delete" ] && command_start delete
     [ "$1" = "create" ] && command_start create
+    [ "$1" = "start" ] && command_start start
 }
 
 main "$@"
