@@ -8,13 +8,16 @@
 - **28th May 2025** – *Introduction to Git*
   What it is, how it works, and how we can use it effectively.
 
-- **11th June 2025** – *Fixing a broken Linux system*
+- **11th June 2025** – *Fixing a broken Linux system - Part 1*
   Practical steps for diagnosing and repairing common issues.
 
-- **18th June 2025** – *Using SSH and remote access*
+- **18th June 2025** – *Fixing a broken Linux system - Part 2*
+  Practical steps for diagnosing and repairing common issues.
+
+- **25th June 2025** – *Using SSH and remote access*
   Learn how to securely connect to and manage remote systems.
 
-- **25th June 2025** – *Writing simple Bash scripts*
+- **2nd July 2025** – *Writing simple Bash scripts*
   Automate tasks and boost productivity with basic scripting skills.
 
 ## How to Connect to the KS Docker Machines
